@@ -8,7 +8,7 @@ namespace SnapMind.Screenshoter;
 
 internal class Program
 {
-    private static readonly string _baseAddress = "http://localhost:5132";
+    private static readonly string _baseAddress = "http://localhost:5201";
     private static System.Drawing.Rectangle _region = new Rectangle(x: 100, y: 100, width: 800, height: 600);
     private static readonly string _aiPostRequestAddress = "/api/ai/generate";
 
@@ -85,7 +85,7 @@ internal class Program
                         var request = new
                         {
                             model = "qwen3.5:4b",
-                            prompt = "Что на изображении? Ответь кратко. Если ты видишь тест с вопросами на изображении, то укажи правильные варианты",
+                            prompt = "Тебе представлено изображение. Главная твоя задача - описать его. Если на изображении ты видешь спискок вопросов,например тест, то напиши верный ответ",
                             imageBase64 = base64
                         };
 
